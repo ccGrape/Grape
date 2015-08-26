@@ -18,7 +18,8 @@ import com.doubleC.grape.base.BaseActivity;
 import com.doubleC.grape.business.find.database.bean.GrapeDataBaseBean;
 import com.doubleC.grape.business.find.database.daapter.DataBaseAdapter;
 import com.doubleC.grape.common.ToastUtil;
-import com.doubleC.grape.database.DataBaseHelper;
+import com.doubleC.grape.common.database.DataBaseHelper;
+import com.doubleC.grape.common.util.NetWorkBroadcastReceiver;
 
 /**
  * 数据库测试
@@ -26,6 +27,7 @@ import com.doubleC.grape.database.DataBaseHelper;
  *
  */
 public class DataBaseActivity extends BaseActivity implements OnClickListener,OnItemClickListener{
+    private NetWorkBroadcastReceiver netWorkBroadcastReceiver;
     
     private EditText database_edit_name,database_edit_description;
     private ListView database_listView;
@@ -44,8 +46,14 @@ public class DataBaseActivity extends BaseActivity implements OnClickListener,On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.database_test1);
         initView();
-        addListener();
         initData();
+        addListener();
+    }
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        netWorkBroadcastReceiver.detach(this);
     }
     
     @Override
@@ -62,6 +70,7 @@ public class DataBaseActivity extends BaseActivity implements OnClickListener,On
 
     @Override
     protected void addListener() {
+        netWorkBroadcastReceiver.attach(this);
         database_test1_add.setOnClickListener(this);
         database_test1_update.setOnClickListener(this);
         database_test1_delete.setOnClickListener(this);
@@ -71,6 +80,7 @@ public class DataBaseActivity extends BaseActivity implements OnClickListener,On
 
     @Override
     protected void initData() {
+        netWorkBroadcastReceiver = new NetWorkBroadcastReceiver();
         list = new ArrayList<GrapeDataBaseBean>();
         adapter = new DataBaseAdapter(this, list);
         database_listView.setAdapter(adapter);
@@ -100,7 +110,7 @@ public class DataBaseActivity extends BaseActivity implements OnClickListener,On
         		ToastUtil.showToastShort(this, "选择要进行更新的元素");
         		return;
         	}
-        	update(position);
+        	updateDataBase(position);
             break;
         case R.id.database_test1_delete:
             if(position<0){
@@ -138,7 +148,7 @@ public class DataBaseActivity extends BaseActivity implements OnClickListener,On
         adapter.notifyDataSetChanged();
     }
     
-    private void update(int position){
+    private void updateDataBase(int position){
     	mCursor.moveToPosition(position);
     	position = -1;
     	int id = mCursor.getInt(0);

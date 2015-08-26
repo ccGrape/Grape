@@ -1,4 +1,4 @@
-package com.doubleC.grape.database;
+package com.doubleC.grape.common.database;
 
 import android.content.ContentValues;
 import android.content.Context;

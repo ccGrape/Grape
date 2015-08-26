@@ -9,6 +9,8 @@
         android:targetSdkVersion="18" />
 
     <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 网络 -->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/grape"
@@ -24,6 +26,13 @@
             </intent-filter>
         </activity>
         <activity android:name="com.doubleC.grape.business.find.database.DataBaseActivity"></activity>
+        
+        
+        <receiver android:name="com.doubleC.grape.common.util.NetWorkBroadcastReceiver">
+            <intent-filter >
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

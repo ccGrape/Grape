@@ -1,4 +1,4 @@
-package com.doubleC.grape.util;
+package com.doubleC.grape.common.util;
 
 import java.io.BufferedReader;
 import java.io.File;
