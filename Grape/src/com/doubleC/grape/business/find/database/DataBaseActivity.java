@@ -53,7 +53,6 @@ public class DataBaseActivity extends BaseActivity implements OnClickListener,On
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        netWorkBroadcastReceiver.detach(this);
     }
     
     @Override
@@ -70,7 +69,6 @@ public class DataBaseActivity extends BaseActivity implements OnClickListener,On
 
     @Override
     protected void addListener() {
-        netWorkBroadcastReceiver.attach(this);
         database_test1_add.setOnClickListener(this);
         database_test1_update.setOnClickListener(this);
         database_test1_delete.setOnClickListener(this);

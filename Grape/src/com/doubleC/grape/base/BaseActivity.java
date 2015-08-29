@@ -12,19 +12,12 @@ import com.doubleC.grape.common.oberver.NetworkStatusOberver;
  * @author doubleC
  * 2015/08/06
  */
-public abstract class BaseActivity extends Activity implements NetworkStatusOberver{
+public abstract class BaseActivity extends Activity{
     protected boolean isFront; 
     
     protected abstract void initView();
     protected abstract void addListener();
     protected abstract void initData();
-    
-    @Override
-    public void update(int ststus) {
-        if(isFront){
-            Log.d("fcc", "网络变化了");
-        }
-    }
     
     @Override
     protected void onResume() {

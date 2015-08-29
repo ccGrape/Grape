@@ -1,5 +1,5 @@
 package com.doubleC.grape.common.oberver;
 
 public interface NetworkStatusOberver {
-   public void update(int ststus);
+   public void update(int status);
 }

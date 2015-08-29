@@ -13,6 +13,7 @@ import android.view.View;
  * 2015/08/06
  */
 public abstract class BaseFragment extends Fragment{
+    protected boolean isFront;
     protected String fragmentName;
     
     /**
@@ -30,6 +31,54 @@ public abstract class BaseFragment extends Fragment{
     protected abstract void addListener();
     
     protected abstract void initData();
+    
+    @Override
+    public void onResume() {
+        super.onResume();
+        isFront = true;
+    }
+    
+    @Override
+    public void onStop() {
+        super.onStop();
+        isFront = false;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

@@ -11,8 +11,10 @@ import android.widget.TextView;
 import com.doubleC.grape.R;
 import com.doubleC.grape.base.BaseFragment;
 import com.doubleC.grape.common.ToastUtil;
+import com.doubleC.grape.common.oberver.NetworkStatusOberver;
+import com.doubleC.grape.common.util.NetWorkBroadcastReceiver;
 
-public class HomeFragment extends BaseFragment implements OnClickListener{
+public class HomeFragment extends BaseFragment implements OnClickListener,NetworkStatusOberver{
 
     private View view;
     private TextView home_text;
@@ -42,6 +44,7 @@ public class HomeFragment extends BaseFragment implements OnClickListener{
 
     @Override
     protected void addListener() {
+        NetWorkBroadcastReceiver.attach(this);
         home_text.setOnClickListener(this);
     }
 
@@ -61,6 +64,17 @@ public class HomeFragment extends BaseFragment implements OnClickListener{
             break;
         }
     }
+
+    @Override
+    public void update(int status) {
+        if(isFront){
+            ToastUtil.showToastShort(getActivity(), "网络状态为"+status);
+        }        
+    }
     
-    
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        
+    }
 }

@@ -14,21 +14,21 @@ import com.doubleC.grape.common.oberver.NetworkStatusOberver;
 public class NetWorkBroadcastReceiver extends BroadcastReceiver {
     State wifiState = null;
     State mobileState = null;
-    private  List<NetworkStatusOberver> list = new ArrayList<NetworkStatusOberver>();
-    
-    public void attach(NetworkStatusOberver observer){
+    public static  List<NetworkStatusOberver> list = new ArrayList<NetworkStatusOberver>();
+    public static void attach(NetworkStatusOberver observer){
         list.add(observer);
     }
-    
-    public void detach(NetworkStatusOberver observer){
+    public static void  detach(NetworkStatusOberver observer){
         list.remove(observer);
     }
     
-    public void nodifyObservers(int newState){
+    public static void nodifyObservers(int netStatus){
+        
         for(NetworkStatusOberver observer : list){
-            observer.update(newState);
+            observer.update(netStatus);
         }
     }
+    
     
     @Override
     public void onReceive(Context context, Intent intent) {
