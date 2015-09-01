@@ -19,7 +19,6 @@ import android.widget.Button;
 public class FindFragment extends BaseFragment implements OnClickListener{
     
     private Button find_db,find_dialog;
-    ////dddd
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
