@@ -12,5 +12,27 @@
     <dimen name="h5">16sp</dimen>
     <dimen name="h6">14sp</dimen>
     <dimen name="h7">12sp</dimen>
+    
+    <dimen name="margin_h1">50dp</dimen>
+    <dimen name="margin_h2">45dp</dimen>
+    <dimen name="margin_h3">40dp</dimen>
+    <dimen name="margin_h4">35dp</dimen>
+    <dimen name="margin_h5">30dp</dimen>
+    <dimen name="margin_h6">25dp</dimen>
+    <dimen name="margin_h7">20dp</dimen>
+    <dimen name="margin_h8">15dp</dimen>
+    <dimen name="margin_h9">10dp</dimen>
+    <dimen name="margin_h10">5dp</dimen>
+    
+    <dimen name="padding_h1">50dp</dimen>
+    <dimen name="padding_h2">45dp</dimen>
+    <dimen name="padding_h3">40dp</dimen>
+    <dimen name="padding_h4">35dp</dimen>
+    <dimen name="padding_h5">30dp</dimen>
+    <dimen name="padding_h6">25dp</dimen>
+    <dimen name="padding_h7">20dp</dimen>
+    <dimen name="padding_h8">15dp</dimen>
+    <dimen name="padding_h9">10dp</dimen>
+    <dimen name="padding_h10">5dp</dimen>
 
 </resources>

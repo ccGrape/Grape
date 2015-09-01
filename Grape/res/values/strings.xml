@@ -17,6 +17,8 @@
     	<string name="database_add">添加</string>
     	<string name="database_update">更新</string>
     	<string name="database_delete">删除</string>
+    	<!-- dialog测试 -->
+    	<string name="dialog">dialog</string>
     <!-- 我的 -->
     <string name="mine">我的</string>
 </resources>

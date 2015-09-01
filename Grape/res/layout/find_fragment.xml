@@ -13,12 +13,22 @@
         android:layout_height="wrap_content"
         android:background="@drawable/editview_bg"
         />
-    <Button 
-        android:id="@+id/find_db"
-        android:layout_width="wrap_content"
+    <com.doubleC.grape.common.view.FlowLayout 
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/database"
-        android:layout_margin="@dimen/margin_h1"
-        />
-    
+        android:layout_marginTop="@dimen/margin_h4"
+        >
+        <Button 
+	        android:id="@+id/find_db"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/database"
+	        />
+        <Button 
+	        android:id="@+id/find_dialog"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/dialog"
+	        />
+    </com.doubleC.grape.common.view.FlowLayout>
 </LinearLayout>

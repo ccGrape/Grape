@@ -3,6 +3,7 @@ package com.doubleC.grape.business.find;
 import com.doubleC.grape.R;
 import com.doubleC.grape.base.BaseFragment;
 import com.doubleC.grape.business.find.database.DataBaseActivity;
+import com.doubleC.grape.business.find.dialog.DialogActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -17,7 +18,7 @@ import android.widget.Button;
 
 public class FindFragment extends BaseFragment implements OnClickListener{
     
-    private Button find_db;
+    private Button find_db,find_dialog;
     
     @Override
     public void onAttach(Activity activity) {
@@ -44,11 +45,13 @@ public class FindFragment extends BaseFragment implements OnClickListener{
     @Override
     protected void initView(View view) {
         find_db = (Button) view.findViewById(R.id.find_db);
+        find_dialog = (Button) view.findViewById(R.id.find_dialog);
     }
 
     @Override
     protected void addListener() {
         find_db.setOnClickListener(this);
+        find_dialog.setOnClickListener(this);
     }
 
     @Override
@@ -61,10 +64,13 @@ public class FindFragment extends BaseFragment implements OnClickListener{
         int id = v.getId();
         switch (id) {
         case R.id.find_db:
-            Intent intent = new Intent(getActivity(),DataBaseActivity.class);
-            startActivity(intent);
+            Intent dbIntent = new Intent(getActivity(),DataBaseActivity.class);
+            startActivity(dbIntent);
             break;
-
+        case R.id.find_dialog:
+            Intent DialogIntent = new Intent(getActivity(),DialogActivity.class);
+            startActivity(DialogIntent);
+            break;
         default:
             break;
         }

@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.doubleC.grape.business.find.database.DataBaseActivity"></activity>
-        
+        <activity android:name="com.doubleC.grape.business.find.dialog.DialogActivity"></activity>
         
         <receiver android:name="com.doubleC.grape.common.util.NetWorkBroadcastReceiver">
             <intent-filter >
