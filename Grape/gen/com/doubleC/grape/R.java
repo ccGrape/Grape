@@ -89,9 +89,22 @@ public final class R {
         public static final int dialog_bg=0x7f020013;
         public static final int editview_bg=0x7f020014;
         public static final int grape=0x7f020015;
-        public static final int textview_bg=0x7f020016;
-        public static final int toast_bg=0x7f020017;
-        public static final int trans_bg=0x7f020018;
+        public static final int loading_1=0x7f020016;
+        public static final int loading_10=0x7f020017;
+        public static final int loading_11=0x7f020018;
+        public static final int loading_12=0x7f020019;
+        public static final int loading_2=0x7f02001a;
+        public static final int loading_3=0x7f02001b;
+        public static final int loading_4=0x7f02001c;
+        public static final int loading_5=0x7f02001d;
+        public static final int loading_6=0x7f02001e;
+        public static final int loading_7=0x7f02001f;
+        public static final int loading_8=0x7f020020;
+        public static final int loading_9=0x7f020021;
+        public static final int loading_animation=0x7f020022;
+        public static final int textview_bg=0x7f020023;
+        public static final int toast_bg=0x7f020024;
+        public static final int trans_bg=0x7f020025;
     }
     public static final class id {
         public static final int action_settings=0x7f0a0025;

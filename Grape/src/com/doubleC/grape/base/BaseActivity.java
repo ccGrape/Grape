@@ -1,9 +1,10 @@
 package com.doubleC.grape.base;
 
 import android.app.Activity;
-import android.util.Log;
+import android.app.ProgressDialog;
+import android.graphics.drawable.Drawable;
 
-import com.doubleC.grape.common.oberver.NetworkStatusOberver;
+import com.doubleC.grape.R;
 
 /**
  * 
@@ -30,4 +31,21 @@ public abstract class BaseActivity extends Activity{
         super.onStop();
         isFront = false;
     }
+    
+    /**加载进度条*/
+	@SuppressWarnings("unused")
+	public void showProgressDialog() {
+		ProgressDialog progressDialog = null;
+		
+		if(progressDialog!=null){
+			progressDialog.cancel();
+		}
+		progressDialog=new ProgressDialog(this);
+		Drawable drawable=getResources().getDrawable(R.drawable.loading_animation);
+		progressDialog.setIndeterminateDrawable(drawable);
+		progressDialog.setIndeterminate(true);
+		progressDialog.setCancelable(true);
+		progressDialog.setMessage("请稍候，正在努力加载。。");
+		progressDialog.show();
+	}
 }
