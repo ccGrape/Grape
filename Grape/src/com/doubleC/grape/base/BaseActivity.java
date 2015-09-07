@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.graphics.drawable.Drawable;
 
 import com.doubleC.grape.R;
+import com.doubleC.grape.common.view.CustomProgressDialog;
 
 /**
  * 
@@ -15,7 +16,7 @@ import com.doubleC.grape.R;
  */
 public abstract class BaseActivity extends Activity{
     protected boolean isFront; 
-    ProgressDialog progressDialog = null;
+    CustomProgressDialog costumerProgressDialog = null;
     
     protected abstract void initView();
     protected abstract void addListener();
@@ -34,27 +35,30 @@ public abstract class BaseActivity extends Activity{
     }
     
 	public void showProgressDialog() {
-		if(progressDialog==null){
-		    progressDialog=new ProgressDialog(this);
-		}
-		if(progressDialog.isShowing()){
-		    return;
-		    
-		}
-		//progressDialog.setIndeterminate(true);//不确定的状态
-		//progressDialog.setMessage("");
-		progressDialog.setCancelable(true);
-		progressDialog.setCanceledOnTouchOutside(false);
-		progressDialog.show();
+	    showProgressDialog("");
 	}
 	
+	public void showProgressDialog(String message) {
+        if(costumerProgressDialog==null){
+            costumerProgressDialog = CustomProgressDialog.createDialog(this);
+        }
+        
+        if(costumerProgressDialog.isShowing()){
+            return;
+        }
+        costumerProgressDialog.setCancelable(true);
+        costumerProgressDialog.setCanceledOnTouchOutside(false);
+        costumerProgressDialog.setMessage(message);
+        costumerProgressDialog.show();
+    }
+	
 	public void cancelProgressDialog(){
-	    if(progressDialog==null){
+	    if(costumerProgressDialog==null){
 	        return;
 	    }
-	    if(!progressDialog.isShowing()){
+	    if(!costumerProgressDialog.isShowing()){
 	        return;
 	    }
-	    progressDialog.cancel();
+	    costumerProgressDialog.cancel();
 	}
 }

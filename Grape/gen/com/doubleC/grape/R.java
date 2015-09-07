@@ -11,6 +11,7 @@ public final class R {
     public static final class anim {
         public static final int actionsheet_dialog_in=0x7f040000;
         public static final int actionsheet_dialog_out=0x7f040001;
+        public static final int custom_progress_round=0x7f040002;
     }
     public static final class attr {
     }
@@ -101,73 +102,76 @@ public final class R {
         public static final int loading_7=0x7f02001f;
         public static final int loading_8=0x7f020020;
         public static final int loading_9=0x7f020021;
-        public static final int loading_animation=0x7f020022;
-        public static final int textview_bg=0x7f020023;
-        public static final int toast_bg=0x7f020024;
-        public static final int trans_bg=0x7f020025;
+        public static final int textview_bg=0x7f020022;
+        public static final int toast_bg=0x7f020023;
+        public static final int trans_bg=0x7f020024;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a002b;
+        public static final int action_settings=0x7f0a002e;
         public static final int btn1=0x7f0a0000;
         public static final int btn2=0x7f0a0001;
         public static final int btn3=0x7f0a0002;
         public static final int btn4=0x7f0a0003;
         public static final int btn5=0x7f0a0004;
-        public static final int btn_neg=0x7f0a0027;
-        public static final int btn_pos=0x7f0a0029;
-        public static final int classify=0x7f0a0016;
-        public static final int classify_text=0x7f0a0017;
-        public static final int contain=0x7f0a0014;
-        public static final int database_edit_description=0x7f0a0006;
-        public static final int database_edit_name=0x7f0a0005;
-        public static final int database_listView=0x7f0a000a;
-        public static final int database_test1_add=0x7f0a0007;
-        public static final int database_test1_delete=0x7f0a0009;
-        public static final int database_test1_description=0x7f0a000d;
-        public static final int database_test1_id=0x7f0a000b;
-        public static final int database_test1_name=0x7f0a000c;
-        public static final int database_test1_update=0x7f0a0008;
-        public static final int find=0x7f0a0018;
-        public static final int find_db=0x7f0a000e;
-        public static final int find_dialog=0x7f0a000f;
-        public static final int find_progressDialog=0x7f0a0010;
-        public static final int find_text=0x7f0a0019;
-        public static final int find_url_regex=0x7f0a0011;
-        public static final int home=0x7f0a0015;
-        public static final int home_text=0x7f0a0012;
-        public static final int img_line=0x7f0a0028;
-        public static final int json_button=0x7f0a0013;
-        public static final int lLayout_bg=0x7f0a0025;
-        public static final int lLayout_content=0x7f0a0023;
-        public static final int mine=0x7f0a001a;
-        public static final int mine_text=0x7f0a001b;
-        public static final int progressdialog_cancle=0x7f0a001d;
-        public static final int progressdialog_show=0x7f0a001c;
-        public static final int sLayout_content=0x7f0a0022;
-        public static final int toast=0x7f0a001e;
-        public static final int toast_info=0x7f0a001f;
-        public static final int txt_cancel=0x7f0a0024;
-        public static final int txt_msg=0x7f0a0026;
-        public static final int txt_title=0x7f0a0021;
-        public static final int url=0x7f0a0020;
-        public static final int web=0x7f0a002a;
+        public static final int btn_neg=0x7f0a002a;
+        public static final int btn_pos=0x7f0a002c;
+        public static final int classify=0x7f0a0018;
+        public static final int classify_text=0x7f0a0019;
+        public static final int contain=0x7f0a0016;
+        public static final int database_edit_description=0x7f0a0008;
+        public static final int database_edit_name=0x7f0a0007;
+        public static final int database_listView=0x7f0a000c;
+        public static final int database_test1_add=0x7f0a0009;
+        public static final int database_test1_delete=0x7f0a000b;
+        public static final int database_test1_description=0x7f0a000f;
+        public static final int database_test1_id=0x7f0a000d;
+        public static final int database_test1_name=0x7f0a000e;
+        public static final int database_test1_update=0x7f0a000a;
+        public static final int find=0x7f0a001a;
+        public static final int find_db=0x7f0a0010;
+        public static final int find_dialog=0x7f0a0011;
+        public static final int find_progressDialog=0x7f0a0012;
+        public static final int find_text=0x7f0a001b;
+        public static final int find_url_regex=0x7f0a0013;
+        public static final int home=0x7f0a0017;
+        public static final int home_text=0x7f0a0014;
+        public static final int img_line=0x7f0a002b;
+        public static final int json_button=0x7f0a0015;
+        public static final int lLayout_bg=0x7f0a0028;
+        public static final int lLayout_content=0x7f0a0026;
+        public static final int loading_image=0x7f0a0005;
+        public static final int loading_title=0x7f0a0006;
+        public static final int mine=0x7f0a001c;
+        public static final int mine_text=0x7f0a001d;
+        public static final int progressdialog_cancle=0x7f0a001f;
+        public static final int progressdialog_coustomer=0x7f0a0020;
+        public static final int progressdialog_show=0x7f0a001e;
+        public static final int sLayout_content=0x7f0a0025;
+        public static final int toast=0x7f0a0021;
+        public static final int toast_info=0x7f0a0022;
+        public static final int txt_cancel=0x7f0a0027;
+        public static final int txt_msg=0x7f0a0029;
+        public static final int txt_title=0x7f0a0024;
+        public static final int url=0x7f0a0023;
+        public static final int web=0x7f0a002d;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int classify_fragment=0x7f030001;
-        public static final int database_test=0x7f030002;
-        public static final int database_test_itme=0x7f030003;
-        public static final int find_fragment1=0x7f030004;
-        public static final int home_fragment=0x7f030005;
-        public static final int json_test=0x7f030006;
-        public static final int main=0x7f030007;
-        public static final int mine_fragment=0x7f030008;
-        public static final int progressdialog=0x7f030009;
-        public static final int toast=0x7f03000a;
-        public static final int urlregex=0x7f03000b;
-        public static final int view_actionsheet=0x7f03000c;
-        public static final int view_alertdialog=0x7f03000d;
-        public static final int web=0x7f03000e;
+        public static final int custom_progress_dialog=0x7f030002;
+        public static final int database_test=0x7f030003;
+        public static final int database_test_itme=0x7f030004;
+        public static final int find_fragment1=0x7f030005;
+        public static final int home_fragment=0x7f030006;
+        public static final int json_test=0x7f030007;
+        public static final int main=0x7f030008;
+        public static final int mine_fragment=0x7f030009;
+        public static final int progressdialog=0x7f03000a;
+        public static final int toast=0x7f03000b;
+        public static final int urlregex=0x7f03000c;
+        public static final int view_actionsheet=0x7f03000d;
+        public static final int view_alertdialog=0x7f03000e;
+        public static final int web=0x7f03000f;
     }
     public static final class menu {
         public static final int main=0x7f090000;
@@ -236,8 +240,9 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080001;
-        /**  未知 
+        /**  自定义 progressDialog 
          */
-        public static final int customProgerssDialog=0x7f080005;
+        public static final int CustomDialog=0x7f080005;
+        public static final int CustomProgressDialog=0x7f080006;
     }
 }
