@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView 
+        android:id="@+id/progressdialog_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textview_bg"
+        android:text="progressDialog展示"
+        android:layout_margin="@dimen/margin_h10"
+        android:padding="@dimen/padding_h8"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/progressdialog_cancle" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textview_bg"
+        android:text="progressDialog隐藏"
+        android:layout_margin="@dimen/margin_h10"
+        android:padding="@dimen/padding_h8"
+        android:gravity="center"
+        />
+
+</LinearLayout>

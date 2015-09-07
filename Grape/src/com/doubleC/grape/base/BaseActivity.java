@@ -15,6 +15,7 @@ import com.doubleC.grape.R;
  */
 public abstract class BaseActivity extends Activity{
     protected boolean isFront; 
+    ProgressDialog progressDialog = null;
     
     protected abstract void initView();
     protected abstract void addListener();
@@ -32,20 +33,28 @@ public abstract class BaseActivity extends Activity{
         isFront = false;
     }
     
-    /**加载进度条*/
-	@SuppressWarnings("unused")
 	public void showProgressDialog() {
-		ProgressDialog progressDialog = null;
-		
-		if(progressDialog!=null){
-			progressDialog.cancel();
+		if(progressDialog==null){
+		    progressDialog=new ProgressDialog(this);
 		}
-		progressDialog=new ProgressDialog(this);
-		Drawable drawable=getResources().getDrawable(R.drawable.loading_animation);
-		progressDialog.setIndeterminateDrawable(drawable);
-		progressDialog.setIndeterminate(true);
+		if(progressDialog.isShowing()){
+		    return;
+		    
+		}
+		//progressDialog.setIndeterminate(true);//不确定的状态
+		//progressDialog.setMessage("");
 		progressDialog.setCancelable(true);
-		progressDialog.setMessage("请稍候，正在努力加载。。");
+		progressDialog.setCanceledOnTouchOutside(false);
 		progressDialog.show();
+	}
+	
+	public void cancelProgressDialog(){
+	    if(progressDialog==null){
+	        return;
+	    }
+	    if(!progressDialog.isShowing()){
+	        return;
+	    }
+	    progressDialog.cancel();
 	}
 }

@@ -44,7 +44,7 @@ public class DataBaseActivity extends BaseActivity implements OnClickListener,On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.database_test1);
+        setContentView(R.layout.database_test);
         initView();
         initData();
         addListener();

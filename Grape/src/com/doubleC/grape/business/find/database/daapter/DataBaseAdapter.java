@@ -41,7 +41,7 @@ public class DataBaseAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if(null==convertView){
-            convertView = inflater.inflate(R.layout.database_test1_itme,null);
+            convertView = inflater.inflate(R.layout.database_test_itme,null);
             holder = new ViewHolder();
             holder.id = (TextView) convertView.findViewById(R.id.database_test1_id);
             holder.name = (TextView) convertView.findViewById(R.id.database_test1_name);

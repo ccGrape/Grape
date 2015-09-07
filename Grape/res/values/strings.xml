@@ -19,6 +19,7 @@
     	<string name="database_delete">删除</string>
     	<!-- dialog测试 -->
     	<string name="dialog">dialog</string>
+    	<string name="progressDialog">progressDialog</string>
     <!-- 我的 -->
     <string name="mine">我的</string>
 </resources>

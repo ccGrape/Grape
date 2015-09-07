@@ -7,9 +7,10 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
-
+	
     <uses-permission android:name="android.permission.RESTART_PACKAGES" />
     <!-- 网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:allowBackup="true"
@@ -27,7 +28,16 @@
         </activity>
         <activity android:name="com.doubleC.grape.business.find.database.DataBaseActivity"></activity>
         <activity android:name="com.doubleC.grape.business.find.dialog.DialogActivity"></activity>
-        
+        <activity android:name="com.doubleC.grape.business.find.progressdialog.ProgressDialogTest"></activity>
+        <activity android:name="com.doubleC.grape.business.find.urlregex.UrlRegexActivity"></activity>
+        <activity android:name="com.doubleC.grape.business.find.urlregex.UrlRegexWebViewActivity">
+            <intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<category android:name="android.intent.category.BROWSABLE"/>
+				<data android:scheme="com.ccgrape.com" android:host="message_private_url"/>
+			</intent-filter>
+        </activity>
         <receiver android:name="com.doubleC.grape.common.util.NetWorkBroadcastReceiver">
             <intent-filter >
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
