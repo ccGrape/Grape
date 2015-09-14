@@ -48,7 +48,7 @@ public class ProgressDialogTest extends BaseActivity implements OnClickListener{
         int id = v.getId();
         switch (id) {
         case R.id.progressdialog_show:
-            showProgressDialog("ddd");
+            showProgressDialog();
             break;
         case R.id.progressdialog_cancle:
             cancelProgressDialog();
